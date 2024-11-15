@@ -7,6 +7,7 @@ public class Place {
     private String longitude;
     private String state;
     private String stateabbreviation;
+    private String latitude;
 
     public String getPlacename() {
         return placename;
@@ -46,20 +47,19 @@ public class Place {
         return latitude;
     }
 
-    @Override
-    public String toString() {
-        return "Place{" +
-                "placeName='" + placename + '\'' +
-                ", longitude='" + longitude + '\'' +
-                ", state='" + state + '\'' +
-                ", stateAbbreviation='" + stateabbreviation + '\'' +
-                ", latitude='" + latitude + '\'' +
-                '}';
-    }
-
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    private String latitude;
+    @Override
+    public String toString() {
+        return "Place{" +
+                "placename='" + placename + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", state='" + state + '\'' +
+                ", stateabbreviation='" + stateabbreviation + '\'' +
+                ", latitude='" + latitude + '\'' +
+                '}';
+    }
 }
+

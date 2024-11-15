@@ -8,15 +8,19 @@ public class _04_APITestPOJO {
     @Test
     public void extractJsonAll_POJO() {
 
-        Location locationObject =
-        given()
-                .when()
-                .get("https://gorest.co.in/public/v1/users")
+        Location locationNesnesi =
+                given()
 
-                .then()
-                .extract().body().as(Location.class) // Tüm body yi class a göre çevir
-        ;
-        System.out.println(locationObject.getCountry());
-        System.out.println(locationObject);
+                        .when()
+                        .get("http://api.zippopotam.us/us/90210")
+
+                        .then()
+                        .extract().body().as(Location.class)  // Tüm body all Location.class (kalıba göre) çevir
+                ;
+
+        System.out.println("locationNesnesi.getCountry() = " + locationNesnesi.getCountry());
+
+        System.out.println("locationNesnesi = " + locationNesnesi);
+
     }
 }

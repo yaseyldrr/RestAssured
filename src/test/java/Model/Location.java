@@ -5,22 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class Location {
-    /*
-    {
-    "post code": "90210",
-    "country": "United States",
-    "country abbreviation": "US",
-    "places": [
-        {
-            "place name": "Beverly Hills",
-            "longitude": "-118.4065",
-            "state": "California",
-            "state abbreviation": "CA",
-            "latitude": "34.0901"
-        }
-    ]
-}
-     */
     private String postcode;
     private String country;
     private String countryabbreviation;
@@ -56,17 +40,17 @@ public class Location {
         return places;
     }
 
+    public void setPlaces(List<Place> places) {
+        this.places = places;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
-                "postCode='" + postcode + '\'' +
+                "postcode='" + postcode + '\'' +
                 ", country='" + country + '\'' +
-                ", countryAbbreviation='" + countryabbreviation + '\'' +
+                ", countryabbreviation='" + countryabbreviation + '\'' +
                 ", places=" + places +
                 '}';
-    }
-
-    public void setPlaces(List<Place> places) {
-        this.places = places;
     }
 }
