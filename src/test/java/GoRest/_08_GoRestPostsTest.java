@@ -64,7 +64,7 @@ public class _08_GoRestPostsTest {
         String body = randomGenerator.lorem().paragraph();
 
         Map<String, Object> newPost = new HashMap<>();
-        newPost.put("user_id","7530342");
+        newPost.put("user_id", "7530342");
         newPost.put("title", title);
         newPost.put("body", body);
 
